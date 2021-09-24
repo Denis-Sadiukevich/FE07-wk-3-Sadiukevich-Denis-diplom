@@ -20,12 +20,6 @@ const Navigation = () => {
 
    return (
       <div className='navigation-container'>
-         <Link to={Routes.HomeRoute}>
-            <div className={activeRoute === Routes.HomeRoute ? 'navigation-item-active' : 'navigation-item'}>
-               Домой
-            </div>
-         </Link>
-
          <Link to={Routes.TasksRoute}>
             <div className={activeRoute === Routes.TasksRoute ? 'navigation-item-active' : 'navigation-item'}>
                Задачи
@@ -38,15 +32,9 @@ const Navigation = () => {
             </div>
          </Link>
 
-         <Link to={Routes.SignUpRoute}>
-            <div className={activeRoute === Routes.SignUpRoute ? 'navigation-item-active' : 'navigation-item'}>
-               Регистрация
-            </div>
-         </Link>
-
          <Link to={Routes.SignInRoute}>
             <div className={activeRoute === Routes.SignInRoute ? 'navigation-item-active' : 'navigation-item'}>
-               Вход
+               Выход
             </div>
          </Link>
       </div>
