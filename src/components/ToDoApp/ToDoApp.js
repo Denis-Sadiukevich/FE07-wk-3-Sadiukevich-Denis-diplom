@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { setNewItems, setSearchItems, setText, setSearchText, setInputWarning } from '../../redux/actions/toDoAppActions';
-import ToDoList from '../ToDoList/ToDoList';
+import ToDoList from '../toDoList/ToDoList';
 import './ToDoApp.css'
 
 
