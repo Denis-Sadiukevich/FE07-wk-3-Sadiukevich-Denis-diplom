@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
+import { Routes } from '../../utils/routes'
 
-import './Navigation.css'
+import './Navigation.scss'
 
 
 const Navigation = () => {
@@ -19,27 +20,21 @@ const Navigation = () => {
 
    return (
       <div className='navigation-container'>
-         <Link to='/'>
-            <div className={activeRoute === '/' ? 'navigation-item-active' : 'navigation-item'}>
-               Домой
-            </div>
-         </Link>
-
-         <Link to='/login'>
-            <div className={activeRoute === '/login' ? 'navigation-item-active' : 'navigation-item'}>
-               Логин
-            </div>
-         </Link>
-
-         <Link to='/registration'>
-            <div className={activeRoute === '/registration' ? 'navigation-item-active' : 'navigation-item'}>
-               Регистрация
-            </div>
-         </Link>
-
-         <Link to='/tasks'>
-            <div className={activeRoute === '/tasks' ? 'navigation-item-active' : 'navigation-item'}>
+         <Link to={Routes.TasksRoute}>
+            <div className={activeRoute === Routes.TasksRoute ? 'navigation-item-active' : 'navigation-item'}>
                Задачи
+            </div>
+         </Link>
+
+         <Link to={Routes.UsersRoute}>
+            <div className={activeRoute === Routes.UsersRoute ? 'navigation-item-active' : 'navigation-item'}>
+               Пользователи
+            </div>
+         </Link>
+
+         <Link to={Routes.SignInRoute}>
+            <div className={activeRoute === Routes.SignInRoute ? 'navigation-item-active' : 'navigation-item'}>
+               Выход
             </div>
          </Link>
       </div>
